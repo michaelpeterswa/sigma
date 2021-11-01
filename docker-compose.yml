@@ -36,4 +36,4 @@ services:
   sigmafrontend:
     build: frontend
     ports:
-      - 5000:5000
+      - 3000:3000

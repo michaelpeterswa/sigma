@@ -1,22 +1,23 @@
-FROM node:16-alpine
+# -=-=-=-=-=-=- Compile Image -=-=-=-=-=-=-
 
-WORKDIR /usr/src/app
+FROM node AS builder
 
-COPY rollup.config.js ./
-COPY package*.json ./
-COPY postcss.config.js ./
-COPY tailwind.config.js ./
-COPY tsconfig.json ./
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
 
-RUN npm install
-
-COPY ./src ./src
-COPY ./public ./public
+COPY . .
 
 RUN npm run build
 
-EXPOSE 5000
+# -=-=-=-=-=-=- Final Image -=-=-=-=-=-=-
 
-ENV HOST=0.0.0.0
+FROM node:alpine
 
-CMD [ "npm", "start" ]
+WORKDIR /app
+COPY --from=builder /app/build .
+COPY . .
+
+EXPOSE 3000
+
+ENTRYPOINT ["node", "."]
