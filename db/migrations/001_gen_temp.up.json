@@ -3,15 +3,15 @@
   "documents": [
     {
       "name": "sigma",
-      "version": "1.0.0"
+      "version": "v1.0.0"
     },
     {
       "name": "delta",
-      "version": "1.0.0"
+      "version": "v1.0.0"
     },
     {
       "name": "theta",
-      "version": "1.0.0"
+      "version": "v1.0.0"
     }
   ]
 }]
