@@ -36,7 +36,7 @@
 		<h1 class="text-center font-mono font-normal text-yellow-700 text-6xl">{name}</h1>
 	</div>
 	<div class="p-5">
-		<h2 class="text-center font-sans font-light text-yellow-500 text-2xl">welcome to the sigma stack</h2>
+		<h2 class="text-center font-sans font-light text-yellow-500 text-2xl">welcome to the sigma stack (old svelte)</h2>
 	</div>
 	<div class="p-5">
 		<h4 class="text-center font-sans font-normal text-yellow-500 text-xl">apps:</h4>
