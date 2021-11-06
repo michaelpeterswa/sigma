@@ -20,7 +20,7 @@ services:
     volumes:
       - ./db/migrations:/migrations
     entrypoint: >
-                /bin/sh -c 'sleep 5 && migrate -path=/migrations/ -database 
+                /bin/sh -c 'sleep 5 && migrate -path=/migrations/ -database
                 "mongodb://root:example@mongo:27017/main?authSource=admin" up'
     depends_on:
       - "mongo"
