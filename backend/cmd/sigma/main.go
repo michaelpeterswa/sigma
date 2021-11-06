@@ -70,5 +70,8 @@ func main() {
 		c.JSON(200, apps)
 	})
 
-	r.Run()
+	runerr := r.Run()
+	if runerr != nil {
+		panic(runerr)
+	}
 }
